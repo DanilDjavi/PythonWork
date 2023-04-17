@@ -1,13 +1,15 @@
-x = int(input("Введите число: ")) # 0 1 1 2 3 5 8 13 21
-n1 = 0                            # 1 2 3 4 5 6 7  8  9
-n2 = 1
-s = 0
-k = 0
-i = 3
-while i <= x:
-    s = n1 + n2
-    k = n2
-    n2 = s
-    n1 = k
-    i += 1
-print(s)
+import random
+n = int(input("Введите колbxtcndjво монет: ")) 
+reshka = 0
+orel = 0 
+m = [random.randint(1, 2) for i in range(n)]
+print(m)
+for i in range(len(m)):
+    if m[i] == 1:
+        orel += 1
+    elif m[i] == 2:
+        reshka += 1
+if orel < reshka:
+    print("Hужно перевернуть ", orel, " монет c гравюрой орла.")
+else:
+    print("Hужно перевернуть ", reshka, " монет c гравюрой решки.")
